@@ -20,12 +20,12 @@ elif c=='B':
     plt.plot(np.arange(1,num+1,1),f)
     
 elif c=='C':
-    num=365
-    d=list(np.random.randint(1,688,365))
+    num=687
+    d=list(np.random.randint(1,688,687))
     f=[len(list(filter(None,["*"*(d[:n].count(el)-1) for el in set(d[:n])]))) for n in range(1,num+1)]
     plt.plot(np.arange(1,num+1,1),f)
     
-    print("The value of c at n=33:",f[33])
+    print("The value of c at n=32:",f[32])
     
 elif c=='D':
     p=0
