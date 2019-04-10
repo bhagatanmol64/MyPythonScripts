@@ -7,9 +7,8 @@ Created on Mon Mar 25 15:37:29 2019
 import matplotlib.pyplot as plt
 import numpy as np
 
-n=int(input("Enter n:"))
-p=float(input("Enter p:"))
-N=int(input("Enter N:"))
+n,p,N=input("Enter n,p,N:").split()
+n,p,N=int(n),float(p),int(N)
 
 f=open("binomial_N_n_p.dat",'w',encoding="utf8")
 for i in list(np.random.binomial(n,p,size=N)): f.writelines(str(i)+"\n")

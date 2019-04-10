@@ -32,4 +32,6 @@ data=np.array([[comb(n,i)*(p1**i)*((1-p1)**(n-i)) for i in x[0]],
                [comb(n,i)*(p2**i)*((1-p2)**(n-i)) for i in x[1]]])
 
 plt.grid()
-for lis in data: plt.hist(lis)
+for lis in data: 
+    print(lis)
+    plt.hist(lis)
