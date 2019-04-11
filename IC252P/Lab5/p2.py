@@ -22,5 +22,8 @@ for i in range(10000):
         if out[i]==1: s2.append(0)
         else: s2.append(1)
                 
-print(sum(s1)/len(s1),1-(sum(s1)/len(s1)))
-print(sum(s2)/len(s2),1-(sum(s2)/len(s2)))
+
+print("p(Y = 0|X = 0) = ",sum(s1)/len(s1))
+print("p(Y = 1|X = 0) = ",1-(sum(s1)/len(s1)))
+print("p(Y = 1|X = 1) = ",sum(s2)/len(s2))
+print("p(Y = 0|X = 1) = ",1-(sum(s2)/len(s2)))

@@ -15,9 +15,9 @@ sample = [np.random.randint(2) for i in range(10000)]
 #Creating the Channel which follows the assigned probabilities.
 out=[int((i and np.random.rand()/q>=1) or ((not i) and np.random.rand()/p<1)) for i in sample]
 
+#Code for plotting the PMF.
 sig=[0,1]
 results=[1-(sum(out)/len(out)),sum(out)/len(out)]
-
 custm=st.rv_discrete(name='custm', values=(sig, results))
 fig, ax = plt.subplots(1, 1)
 ax.plot(sig, custm.pmf(sig), 'ro', ms=8, mec='r')
