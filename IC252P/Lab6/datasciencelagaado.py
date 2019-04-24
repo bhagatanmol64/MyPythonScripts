@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Apr 23 15:01:16 2019
-@author: prakhar
+@author: Prakhar
 """
 import pandas as pd
 import numpy as np
@@ -39,7 +39,8 @@ print("\nValues of covariance using numpy.cov():-"+line())
 for i in [1,2,13,14,16]: print("cov("+col[i]+","+col[21]+"):\t",np.cov(list(data[col[i]]),list(data[col[21]]))[0][1])
 
 '''Finding Pearson's Correlation Coefficients'''
+Rating=["None","Weak","Moderate","Moderate","Strong"]
 print("\nCorrelation coefficients:-"+line())
-for i in [1,2,13,14,16]: print("r("+col[i]+","+col[21]+"):\t",r(i,21))
+for i in [1,2,13,14,16]: print("r("+col[i]+","+col[21]+"):\t",r(i,21),"("+Rating[int(np.ceil(abs(10*r(i,21))))]+")")
 print("\nCorrelation coefficients using scipy.stats.pearsonr():-"+line())
-for i in [1,2,13,14,16]: print("r("+col[i]+","+col[21]+"):\t",st.pearsonr((data[col[i]]),(data[col[21]]))[0])
+for i in [1,2,13,14,16]: print("r("+col[i]+","+col[21]+"):\t",st.pearsonr((data[col[i]]),(data[col[21]]))[0],"("+Rating[int(np.ceil(abs(10*st.pearsonr((data[col[i]]),(data[col[21]]))[0])))]+")")
