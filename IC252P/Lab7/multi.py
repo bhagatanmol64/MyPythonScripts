@@ -27,9 +27,6 @@ plt.show()
 print("Mean:\n",np.array([mean(x),mean(y)]).reshape(2,1),"\n")
 print("Covariance Matrix:\n",np.array([cov(i,j) for j in [x,y] for i in [x,y]]).reshape(2,2))
 
-gx,gy=np.random.multivariate_normal(np.array([0,0]),np.array([[1,0],[0,1]]),100).T
-fx,fy=np.random.multivariate_normal(np.array([2.5,2.5]),np.array([[0.5,0],[0,0.5]]),100).T
-
 d1 = multivariate_normal(mean=[0,0], cov=[[1,0],[0,1]])
 pdf1=[(d1.pdf(i)) for i in data]
 plt.scatter([i for i in range(2000)],pdf1)
