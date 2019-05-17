@@ -17,6 +17,7 @@ sx=[[np.random.random()*(max(a,b)-min(a,b))+min(a,b),np.random.random()] for i i
 uc,ac=[sx[i] for i in range(n) if sx[i][1]<=N(sx[i][0],0,1)],[sx[i] for i in range(n) if sx[i][1]> N(sx[i][0],0,1)]
 
 """Plotting the distribution and data points."""
-plt.scatter([i[0] for i in ac],[i[1] for i in ac],color="yellow");plt.scatter([i[0] for i in uc],[i[1] for i in uc],color="red")
+plt.scatter([i[0] for i in ac],[i[1] for i in ac],color="yellow")
+plt.scatter([i[0] for i in uc],[i[1] for i in uc],color="red")
 plt.plot(np.linspace(-4, 4, 1000),N(np.linspace(-4, 4, 1000), 0,1))
 print("\nThe area under the curve is",len(uc)*(max(a,b)-min(a,b))/n)
