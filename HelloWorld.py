@@ -6,3 +6,6 @@ Created on Wed Dec 26 14:01:49 2018
 """
 
 print("Hello World")
+n=int(input())
+
+print("The entered value is ",n)
